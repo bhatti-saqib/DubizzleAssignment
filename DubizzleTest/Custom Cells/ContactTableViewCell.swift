@@ -14,9 +14,7 @@ class ContactTableViewCell: UITableViewCell {
             guard let listItem = list else {return}
             let name = listItem.name
             
-//            let imageUrl = URL(string: listItem.image_urls[0])
-//            profileImageView.loadImage(fromURL: imageUrl!, placeHolderImage: "Placeholder")
-            profileImageView.loadImage(urlString: listItem.image_urls[0])
+            profileImageView.loadImage(urlString: listItem.image_urls[0], placeHolderImage: "Placeholder")
             
             nameLabel.text = name
             

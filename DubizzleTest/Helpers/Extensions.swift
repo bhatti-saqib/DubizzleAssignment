@@ -32,7 +32,9 @@ var activityView: UIActivityIndicatorView?
 
 extension UIImageView {
     
-    func loadImage(urlString: String) {
+    func loadImage(urlString: String, placeHolderImage: String) {
+        self.image = UIImage(named: placeHolderImage)
+        
         if let cacheImage = imageCache.object(forKey: urlString as AnyObject) as? UIImage {
             self.image = cacheImage
             return
@@ -68,27 +70,6 @@ extension UIImageView {
     func hideActivityIndicator() {
         if (activityView != nil) {
             activityView?.stopAnimating()
-        }
-    }
-}
-
-
-extension Date {
-    
-    static func getFormattedDate(_ dateString: String?) -> String? {
-        let dateFormat = DateFormatter()
-        
-        dateFormat.dateFormat = "yyyy-MM-dd HH:mm:ss.SSS"
-        let date = dateFormat.date(from: dateString ?? "")
-
-        dateFormat.dateFormat = "EEEE MMMM d, YYYY"
-        var dateStr: String? = nil
-        if let date = date {
-            dateStr = dateFormat.string(from: date)
-            return dateStr
-        }
-        else {
-            return nil
         }
     }
 }
