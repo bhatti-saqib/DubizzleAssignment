@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA275233257FB6A90069DA76 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA275232257FB6A90069DA76 /* ImageCache.swift */; };
 		EA5871B8257FAF7D00915516 /* ImageCache.h in Headers */ = {isa = PBXBuildFile; fileRef = EA5871B6257FAF7D00915516 /* ImageCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		EA5871B3257FAF7D00915516 /* ImageCache.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ImageCache.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA275232257FB6A90069DA76 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		EA5871B3257FAF7D00915516 /* ImageCacheFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ImageCacheFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA5871B6257FAF7D00915516 /* ImageCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageCache.h; sourceTree = "<group>"; };
 		EA5871B7257FAF7D00915516 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -38,7 +40,7 @@
 		EA5871B4257FAF7D00915516 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EA5871B3257FAF7D00915516 /* ImageCache.framework */,
+				EA5871B3257FAF7D00915516 /* ImageCacheFramework.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -47,6 +49,7 @@
 			isa = PBXGroup;
 			children = (
 				EA5871B6257FAF7D00915516 /* ImageCache.h */,
+				EA275232257FB6A90069DA76 /* ImageCache.swift */,
 				EA5871B7257FAF7D00915516 /* Info.plist */,
 			);
 			path = ImageCache;
@@ -66,9 +69,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		EA5871B2257FAF7D00915516 /* ImageCache */ = {
+		EA5871B2257FAF7D00915516 /* ImageCacheFramework */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EA5871BB257FAF7D00915516 /* Build configuration list for PBXNativeTarget "ImageCache" */;
+			buildConfigurationList = EA5871BB257FAF7D00915516 /* Build configuration list for PBXNativeTarget "ImageCacheFramework" */;
 			buildPhases = (
 				EA5871AE257FAF7D00915516 /* Headers */,
 				EA5871AF257FAF7D00915516 /* Sources */,
@@ -79,9 +82,9 @@
 			);
 			dependencies = (
 			);
-			name = ImageCache;
+			name = ImageCacheFramework;
 			productName = ImageCache;
-			productReference = EA5871B3257FAF7D00915516 /* ImageCache.framework */;
+			productReference = EA5871B3257FAF7D00915516 /* ImageCacheFramework.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -94,10 +97,11 @@
 				TargetAttributes = {
 					EA5871B2257FAF7D00915516 = {
 						CreatedOnToolsVersion = 12.2;
+						LastSwiftMigration = 1220;
 					};
 				};
 			};
-			buildConfigurationList = EA5871AD257FAF7D00915516 /* Build configuration list for PBXProject "ImageCache" */;
+			buildConfigurationList = EA5871AD257FAF7D00915516 /* Build configuration list for PBXProject "ImageCacheFramework" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -110,7 +114,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EA5871B2257FAF7D00915516 /* ImageCache */,
+				EA5871B2257FAF7D00915516 /* ImageCacheFramework */,
 			);
 		};
 /* End PBXProject section */
@@ -130,6 +134,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA275233257FB6A90069DA76 /* ImageCache.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +266,7 @@
 		EA5871BC257FAF7D00915516 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -268,6 +274,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = ImageCache/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -276,14 +283,17 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.Saqib.Bhatti.ImageCache;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		EA5871BD257FAF7D00915516 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -291,6 +301,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = ImageCache/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -299,15 +310,16 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.Saqib.Bhatti.ImageCache;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		EA5871AD257FAF7D00915516 /* Build configuration list for PBXProject "ImageCache" */ = {
+		EA5871AD257FAF7D00915516 /* Build configuration list for PBXProject "ImageCacheFramework" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EA5871B9257FAF7D00915516 /* Debug */,
@@ -316,7 +328,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EA5871BB257FAF7D00915516 /* Build configuration list for PBXNativeTarget "ImageCache" */ = {
+		EA5871BB257FAF7D00915516 /* Build configuration list for PBXNativeTarget "ImageCacheFramework" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EA5871BC257FAF7D00915516 /* Debug */,

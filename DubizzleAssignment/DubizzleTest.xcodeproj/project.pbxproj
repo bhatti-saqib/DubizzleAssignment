@@ -22,7 +22,33 @@
 		41A32B45257C057A0012164B /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A32B44257C057A0012164B /* Globals.swift */; };
 		41A32B4B257C08240012164B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A32B4A257C08240012164B /* Extensions.swift */; };
 		41A32B59257D08D90012164B /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41A32B58257D08D90012164B /* DetailViewController.m */; };
+		EA996FC4257FC2D600077E59 /* ImageCacheFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8A08EC257FC22B007D80A7 /* ImageCacheFramework.framework */; };
+		EA996FC5257FC2D600077E59 /* ImageCacheFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EA8A08EC257FC22B007D80A7 /* ImageCacheFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EA8A08EB257FC22B007D80A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA8A08E7257FC22B007D80A7 /* ImageCacheFramework.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EA5871B3257FAF7D00915516;
+			remoteInfo = ImageCacheFramework;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EA5DCB95257FBC5100E78544 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				EA996FC5257FC2D600077E59 /* ImageCacheFramework.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		417ED43A257F34E700B58851 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
@@ -46,6 +72,7 @@
 		5C89F2950ADD4F7350407888 /* Pods-DubizzleTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DubizzleTest.release.xcconfig"; path = "Target Support Files/Pods-DubizzleTest/Pods-DubizzleTest.release.xcconfig"; sourceTree = "<group>"; };
 		8C8287370E5B3E31742F65F3 /* Pods-DubizzleTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DubizzleTest.debug.xcconfig"; path = "Target Support Files/Pods-DubizzleTest/Pods-DubizzleTest.debug.xcconfig"; sourceTree = "<group>"; };
 		A9FB006DD626B7862354B450 /* Pods_DubizzleTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DubizzleTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA8A08E7257FC22B007D80A7 /* ImageCacheFramework.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ImageCacheFramework.xcodeproj; path = ../../ImageCache/ImageCacheFramework.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA996FC4257FC2D600077E59 /* ImageCacheFramework.framework in Frameworks */,
 				3A75711F0573874CE333AD6F /* Pods_DubizzleTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -81,6 +109,7 @@
 		41A32B08257AC6D60012164B /* DubizzleTest */ = {
 			isa = PBXGroup;
 			children = (
+				EA8A08E7257FC22B007D80A7 /* ImageCacheFramework.xcodeproj */,
 				41A32B43257C055D0012164B /* Helpers */,
 				41A32B40257BF0710012164B /* View Controllers */,
 				41A32B3C257B91890012164B /* Custom Cells */,
@@ -167,6 +196,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		EA8A08E8257FC22B007D80A7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EA8A08EC257FC22B007D80A7 /* ImageCacheFramework.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -179,6 +216,7 @@
 				41A32B03257AC6D60012164B /* Frameworks */,
 				41A32B04257AC6D60012164B /* Resources */,
 				6A1401F3AAAA7388D08E6C75 /* [CP] Embed Pods Frameworks */,
+				EA5DCB95257FBC5100E78544 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -215,12 +253,28 @@
 			mainGroup = 41A32AFD257AC6D60012164B;
 			productRefGroup = 41A32B07257AC6D60012164B /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = EA8A08E8257FC22B007D80A7 /* Products */;
+					ProjectRef = EA8A08E7257FC22B007D80A7 /* ImageCacheFramework.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				41A32B05257AC6D60012164B /* DubizzleTest */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		EA8A08EC257FC22B007D80A7 /* ImageCacheFramework.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ImageCacheFramework.framework;
+			remoteRef = EA8A08EB257FC22B007D80A7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		41A32B04257AC6D60012164B /* Resources */ = {

@@ -6,12 +6,14 @@
 //
 
 import UIKit
+import ImageCacheFramework
 
 class ListingsViewController: UIViewController {
 
     private var listVM: ListingsViewModel!
     let listingsTableView = UITableView()
-    var imageCache: [String: UIImage?] = [:]
+//    var imageCache: [String: UIImage?] = [:]
+    let image_cache = ImageCache()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,7 +71,8 @@ extension ListingsViewController: UITableViewDelegate, UITableViewDataSource {
         cell.profileImageView.image = UIImage(named: "Placeholder")
         
         if let imageUrl = URL(string: listingVM.image_urls[0]) {
-            if let cachedImage = imageCache[imageUrl.absoluteString] {
+//            if let cachedImage = imageCache[imageUrl.absoluteString] {
+            if let cachedImage = image_cache.returnCacheImage(imageUrl: imageUrl) {
                 cell.profileImageView.image = cachedImage
             }
             else {
@@ -79,7 +82,11 @@ extension ListingsViewController: UITableViewDelegate, UITableViewDataSource {
                         return
                     }
                     DispatchQueue.main.async {
-                        self.imageCache[imageUrl.absoluteString] = image
+//                        self.imageCache[imageUrl.absoluteString] = image
+                        if let image = image {
+                            self.image_cache.storeImageInCache(imageUrl: imageUrl, image: image)
+                        }
+                        
                         if let cellToUpdate = self.listingsTableView.cellForRow(at: indexPath) as? ListingTableViewCell {
                             cellToUpdate.profileImageView.image = image
                             cellToUpdate.setNeedsLayout()
