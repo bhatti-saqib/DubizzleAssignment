@@ -11,6 +11,7 @@ class ListingsViewController: UIViewController {
 
     private var listVM: ListingsViewModel!
     let listingsTableView = UITableView()
+    var imageCache: [String: UIImage?] = [:]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,15 +69,21 @@ extension ListingsViewController: UITableViewDelegate, UITableViewDataSource {
         cell.profileImageView.image = UIImage(named: "Placeholder")
         
         if let imageUrl = URL(string: listingVM.image_urls[0]) {
-            WebService().imageFrom(url: imageUrl) { (image, error) in
-                guard error == nil else {
-                    print(error!)
-                    return
-                }
-                DispatchQueue.main.async {
-                    if let cellToUpdate = self.listingsTableView.cellForRow(at: indexPath) as? ListingTableViewCell {
-                        cellToUpdate.profileImageView.image = image
-                        cellToUpdate.setNeedsLayout()
+            if let cachedImage = imageCache[imageUrl.absoluteString] {
+                cell.profileImageView.image = cachedImage
+            }
+            else {
+                WebService().imageFrom(url: imageUrl) { (image, error) in
+                    guard error == nil else {
+                        print(error!)
+                        return
+                    }
+                    DispatchQueue.main.async {
+                        self.imageCache[imageUrl.absoluteString] = image
+                        if let cellToUpdate = self.listingsTableView.cellForRow(at: indexPath) as? ListingTableViewCell {
+                            cellToUpdate.profileImageView.image = image
+                            cellToUpdate.setNeedsLayout()
+                        }
                     }
                 }
             }
