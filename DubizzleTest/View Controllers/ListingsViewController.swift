@@ -64,6 +64,23 @@ extension ListingsViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "listCell", for: indexPath) as! ListingTableViewCell
 
         let listingVM = self.listVM.listingAtIndex(indexPath.row)
+        
+        cell.profileImageView.image = UIImage(named: "Placeholder")
+        
+        if let imageUrl = URL(string: listingVM.image_urls[0]) {
+            WebService().imageFrom(url: imageUrl) { (image, error) in
+                guard error == nil else {
+                    print(error!)
+                    return
+                }
+                DispatchQueue.main.async {
+                    if let cellToUpdate = self.listingsTableView.cellForRow(at: indexPath) as? ListingTableViewCell {
+                        cellToUpdate.profileImageView.image = image
+                        cellToUpdate.setNeedsLayout()
+                    }
+                }
+            }
+        }
         cell.list = listingVM
 
         return cell

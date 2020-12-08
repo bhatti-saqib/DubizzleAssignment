@@ -26,4 +26,19 @@ final class WebService {
             }
         }.resume()
     }
+    
+    
+    func imageFrom(url: URL, completion: @escaping (UIImage?, Error?) -> Void) {
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            if let error = error {
+                print(error.localizedDescription)
+                completion(nil, error)
+            }
+            else if let data = data {
+                let image = UIImage(data: data)
+                completion(image, nil)
+            }
+            
+        }.resume()
+    }
 }

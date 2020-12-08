@@ -13,9 +13,6 @@ class ListingTableViewCell: UITableViewCell {
         didSet {
             guard let listItem = list else {return}
             let name = listItem.name
-            
-            profileImageView.loadImage(urlString: listItem.image_urls[0], placeHolderImage: "Placeholder")
-            
             nameLabel.text = name
             
             let price = listItem.price
