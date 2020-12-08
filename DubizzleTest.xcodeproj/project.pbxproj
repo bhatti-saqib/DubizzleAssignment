@@ -15,7 +15,7 @@
 		41A32B11257AC6D60012164B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41A32B0F257AC6D60012164B /* Main.storyboard */; };
 		41A32B13257AC6D80012164B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41A32B12257AC6D80012164B /* Assets.xcassets */; };
 		41A32B16257AC6D80012164B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41A32B14257AC6D80012164B /* LaunchScreen.storyboard */; };
-		41A32B2A257ACDF80012164B /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A32B29257ACDF80012164B /* ContactTableViewCell.swift */; };
+		41A32B2A257ACDF80012164B /* ListingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A32B29257ACDF80012164B /* ListingTableViewCell.swift */; };
 		41A32B31257B6A960012164B /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A32B30257B6A960012164B /* WebService.swift */; };
 		41A32B36257B74900012164B /* Listing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A32B35257B74900012164B /* Listing.swift */; };
 		41A32B3A257B8C5E0012164B /* ListingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A32B39257B8C5E0012164B /* ListingsViewModel.swift */; };
@@ -34,7 +34,7 @@
 		41A32B12257AC6D80012164B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		41A32B15257AC6D80012164B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		41A32B17257AC6D80012164B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		41A32B29257ACDF80012164B /* ContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
+		41A32B29257ACDF80012164B /* ListingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingTableViewCell.swift; sourceTree = "<group>"; };
 		41A32B30257B6A960012164B /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		41A32B35257B74900012164B /* Listing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Listing.swift; sourceTree = "<group>"; };
 		41A32B39257B8C5E0012164B /* ListingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingsViewModel.swift; sourceTree = "<group>"; };
@@ -124,7 +124,7 @@
 		41A32B3C257B91890012164B /* Custom Cells */ = {
 			isa = PBXGroup;
 			children = (
-				41A32B29257ACDF80012164B /* ContactTableViewCell.swift */,
+				41A32B29257ACDF80012164B /* ListingTableViewCell.swift */,
 			);
 			path = "Custom Cells";
 			sourceTree = "<group>";
@@ -283,7 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				417ED43B257F34E700B58851 /* Helper.swift in Sources */,
-				41A32B2A257ACDF80012164B /* ContactTableViewCell.swift in Sources */,
+				41A32B2A257ACDF80012164B /* ListingTableViewCell.swift in Sources */,
 				41A32B36257B74900012164B /* Listing.swift in Sources */,
 				41A32B31257B6A960012164B /* WebService.swift in Sources */,
 				41A32B0E257AC6D60012164B /* ListingsViewController.swift in Sources */,

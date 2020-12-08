@@ -10,7 +10,7 @@ import UIKit
 class ListingsViewController: UIViewController {
 
     private var listVM: ListingsViewModel!
-    let contactsTableView = UITableView()
+    let listingsTableView = UITableView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,16 +18,16 @@ class ListingsViewController: UIViewController {
         callListingsAPI()
         
         view.backgroundColor = .white
-        view.addSubview(contactsTableView)
+        view.addSubview(listingsTableView)
         
-        contactsTableView.translatesAutoresizingMaskIntoConstraints = false
+        listingsTableView.translatesAutoresizingMaskIntoConstraints = false
         
-        contactsTableView.topAnchor.constraint(equalTo:view.safeAreaLayoutGuide.topAnchor).isActive = true
-        contactsTableView.leftAnchor.constraint(equalTo:view.safeAreaLayoutGuide.leftAnchor).isActive = true
-        contactsTableView.rightAnchor.constraint(equalTo:view.safeAreaLayoutGuide.rightAnchor).isActive = true
-        contactsTableView.bottomAnchor.constraint(equalTo:view.safeAreaLayoutGuide.bottomAnchor).isActive = true
+        listingsTableView.topAnchor.constraint(equalTo:view.safeAreaLayoutGuide.topAnchor).isActive = true
+        listingsTableView.leftAnchor.constraint(equalTo:view.safeAreaLayoutGuide.leftAnchor).isActive = true
+        listingsTableView.rightAnchor.constraint(equalTo:view.safeAreaLayoutGuide.rightAnchor).isActive = true
+        listingsTableView.bottomAnchor.constraint(equalTo:view.safeAreaLayoutGuide.bottomAnchor).isActive = true
         
-        contactsTableView.register(ContactTableViewCell.self, forCellReuseIdentifier: "contactCell")
+        listingsTableView.register(ListingTableViewCell.self, forCellReuseIdentifier: "listCell")
         
         navigationItem.title = "Listings"
     }
@@ -43,9 +43,9 @@ class ListingsViewController: UIViewController {
                 self.listVM = ListingsViewModel(listings: listings)
                 
                 DispatchQueue.main.async {
-                    self.contactsTableView.dataSource = self
-                    self.contactsTableView.delegate = self
-                    self.contactsTableView.reloadData()
+                    self.listingsTableView.dataSource = self
+                    self.listingsTableView.delegate = self
+                    self.listingsTableView.reloadData()
                 }
             }
         }
@@ -61,7 +61,7 @@ extension ListingsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-        let cell = tableView.dequeueReusableCell(withIdentifier: "contactCell", for: indexPath) as! ContactTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "listCell", for: indexPath) as! ListingTableViewCell
 
         let listingVM = self.listVM.listingAtIndex(indexPath.row)
         cell.list = listingVM

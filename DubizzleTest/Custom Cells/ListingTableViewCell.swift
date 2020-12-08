@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ContactTableViewCell: UITableViewCell {
+class ListingTableViewCell: UITableViewCell {
     
     var list: ListViewModel? {
         didSet {
