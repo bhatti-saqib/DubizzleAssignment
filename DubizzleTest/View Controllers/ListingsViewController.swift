@@ -80,7 +80,10 @@ extension ListingsViewController: UITableViewDelegate, UITableViewDataSource {
         detailVC.arrayOfListData = NSMutableArray()
         detailVC.arrayOfListData.insert(selected_item.name, at: 0)
         detailVC.arrayOfListData.insert(selected_item.price, at: 1)
-        detailVC.arrayOfListData.insert(selected_item.created_at, at: 2)
+        
+        let formattedDateString = Helper.getFormattedDate(selected_item.created_at)
+        detailVC.arrayOfListData.insert(formattedDateString ?? "", at: 2)
+        
         detailVC.imgString = selected_item.image_urls[0]
         
         self.navigationController?.pushViewController(detailVC, animated: true)

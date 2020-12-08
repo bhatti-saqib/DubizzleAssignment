@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3A75711F0573874CE333AD6F /* Pods_DubizzleTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9FB006DD626B7862354B450 /* Pods_DubizzleTest.framework */; };
+		417ED43B257F34E700B58851 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417ED43A257F34E700B58851 /* Helper.swift */; };
 		41A32B0A257AC6D60012164B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A32B09257AC6D60012164B /* AppDelegate.swift */; };
 		41A32B0C257AC6D60012164B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A32B0B257AC6D60012164B /* SceneDelegate.swift */; };
 		41A32B0E257AC6D60012164B /* ListingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A32B0D257AC6D60012164B /* ListingsViewController.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		417ED43A257F34E700B58851 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		41A32B06257AC6D60012164B /* DubizzleTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DubizzleTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41A32B09257AC6D60012164B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41A32B0B257AC6D60012164B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 			children = (
 				41A32B44257C057A0012164B /* Globals.swift */,
 				41A32B4A257C08240012164B /* Extensions.swift */,
+				417ED43A257F34E700B58851 /* Helper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -279,6 +282,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				417ED43B257F34E700B58851 /* Helper.swift in Sources */,
 				41A32B2A257ACDF80012164B /* ContactTableViewCell.swift in Sources */,
 				41A32B36257B74900012164B /* Listing.swift in Sources */,
 				41A32B31257B6A960012164B /* WebService.swift in Sources */,

@@ -27,7 +27,6 @@
 -(void) viewDidAppear:(BOOL)animated {
     [super viewDidAppear:true];
     
-    [self changeDateFormat: @"2019-02-24 04:04:17.566515"];
     [self displayImage];
 }
 
@@ -48,16 +47,6 @@
             [activityIndicator removeFromSuperview];
         });
     });
-}
-
--(void) changeDateFormat: (NSString *)dateString {
-    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-    [dateFormat setDateFormat:@"yyyy-MM-dd HH:mm:ss.SSS"];
-    NSDate *date = [dateFormat dateFromString: dateString];
-    
-    [dateFormat setDateFormat:@"EEEE MMMM d, YYYY"];
-    NSString *dateStr = [dateFormat stringFromDate:date];
-    NSLog(@"%@", dateStr);
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
