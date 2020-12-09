@@ -22,11 +22,19 @@
 		41A32B45257C057A0012164B /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A32B44257C057A0012164B /* Globals.swift */; };
 		41A32B4B257C08240012164B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A32B4A257C08240012164B /* Extensions.swift */; };
 		41A32B59257D08D90012164B /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41A32B58257D08D90012164B /* DetailViewController.m */; };
+		41E088492580888B00C27E9B /* ListingsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E088482580888B00C27E9B /* ListingsViewModelTests.swift */; };
 		EA996FC4257FC2D600077E59 /* ImageCacheFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8A08EC257FC22B007D80A7 /* ImageCacheFramework.framework */; };
 		EA996FC5257FC2D600077E59 /* ImageCacheFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EA8A08EC257FC22B007D80A7 /* ImageCacheFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		41E088412580850F00C27E9B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 41A32AFE257AC6D60012164B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 41A32B05257AC6D60012164B;
+			remoteInfo = DubizzleTest;
+		};
 		EA8A08EB257FC22B007D80A7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EA8A08E7257FC22B007D80A7 /* ImageCacheFramework.xcodeproj */;
@@ -69,6 +77,9 @@
 		41A32B56257D08D80012164B /* DubizzleTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DubizzleTest-Bridging-Header.h"; sourceTree = "<group>"; };
 		41A32B57257D08D90012164B /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		41A32B58257D08D90012164B /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		41E0883C2580850F00C27E9B /* DubizzleTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DubizzleTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		41E088402580850F00C27E9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		41E088482580888B00C27E9B /* ListingsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingsViewModelTests.swift; sourceTree = "<group>"; };
 		5C89F2950ADD4F7350407888 /* Pods-DubizzleTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DubizzleTest.release.xcconfig"; path = "Target Support Files/Pods-DubizzleTest/Pods-DubizzleTest.release.xcconfig"; sourceTree = "<group>"; };
 		8C8287370E5B3E31742F65F3 /* Pods-DubizzleTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DubizzleTest.debug.xcconfig"; path = "Target Support Files/Pods-DubizzleTest/Pods-DubizzleTest.debug.xcconfig"; sourceTree = "<group>"; };
 		A9FB006DD626B7862354B450 /* Pods_DubizzleTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DubizzleTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,6 +96,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		41E088392580850F00C27E9B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -92,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				41A32B08257AC6D60012164B /* DubizzleTest */,
+				41E0883D2580850F00C27E9B /* DubizzleTestTests */,
 				41A32B07257AC6D60012164B /* Products */,
 				4B99E3A3C7B2C15E9A60EA25 /* Pods */,
 				5072E35C14D50658AC4A5631 /* Frameworks */,
@@ -102,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				41A32B06257AC6D60012164B /* DubizzleTest.app */,
+				41E0883C2580850F00C27E9B /* DubizzleTestTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -179,6 +199,15 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		41E0883D2580850F00C27E9B /* DubizzleTestTests */ = {
+			isa = PBXGroup;
+			children = (
+				41E088402580850F00C27E9B /* Info.plist */,
+				41E088482580888B00C27E9B /* ListingsViewModelTests.swift */,
+			);
+			path = DubizzleTestTests;
+			sourceTree = "<group>";
+		};
 		4B99E3A3C7B2C15E9A60EA25 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -227,6 +256,24 @@
 			productReference = 41A32B06257AC6D60012164B /* DubizzleTest.app */;
 			productType = "com.apple.product-type.application";
 		};
+		41E0883B2580850F00C27E9B /* DubizzleTestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 41E088462580850F00C27E9B /* Build configuration list for PBXNativeTarget "DubizzleTestTests" */;
+			buildPhases = (
+				41E088382580850F00C27E9B /* Sources */,
+				41E088392580850F00C27E9B /* Frameworks */,
+				41E0883A2580850F00C27E9B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				41E088422580850F00C27E9B /* PBXTargetDependency */,
+			);
+			name = DubizzleTestTests;
+			productName = DubizzleTestTests;
+			productReference = 41E0883C2580850F00C27E9B /* DubizzleTestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -239,6 +286,10 @@
 					41A32B05257AC6D60012164B = {
 						CreatedOnToolsVersion = 12.2;
 						LastSwiftMigration = 1220;
+					};
+					41E0883B2580850F00C27E9B = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = 41A32B05257AC6D60012164B;
 					};
 				};
 			};
@@ -262,6 +313,7 @@
 			projectRoot = "";
 			targets = (
 				41A32B05257AC6D60012164B /* DubizzleTest */,
+				41E0883B2580850F00C27E9B /* DubizzleTestTests */,
 			);
 		};
 /* End PBXProject section */
@@ -284,6 +336,13 @@
 				41A32B16257AC6D80012164B /* LaunchScreen.storyboard in Resources */,
 				41A32B13257AC6D80012164B /* Assets.xcassets in Resources */,
 				41A32B11257AC6D60012164B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		41E0883A2580850F00C27E9B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,7 +409,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		41E088382580850F00C27E9B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41E088492580888B00C27E9B /* ListingsViewModelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		41E088422580850F00C27E9B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 41A32B05257AC6D60012164B /* DubizzleTest */;
+			targetProxy = 41E088412580850F00C27E9B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		41A32B0F257AC6D60012164B /* Main.storyboard */ = {
@@ -535,6 +610,46 @@
 			};
 			name = Release;
 		};
+		41E088432580850F00C27E9B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 48T2248AE2;
+				INFOPLIST_FILE = DubizzleTestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.saqib.DubizzleTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DubizzleTest.app/DubizzleTest";
+			};
+			name = Debug;
+		};
+		41E088442580850F00C27E9B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 48T2248AE2;
+				INFOPLIST_FILE = DubizzleTestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.saqib.DubizzleTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DubizzleTest.app/DubizzleTest";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -552,6 +667,15 @@
 			buildConfigurations = (
 				41A32B1B257AC6D80012164B /* Debug */,
 				41A32B1C257AC6D80012164B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		41E088462580850F00C27E9B /* Build configuration list for PBXNativeTarget "DubizzleTestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				41E088432580850F00C27E9B /* Debug */,
+				41E088442580850F00C27E9B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
