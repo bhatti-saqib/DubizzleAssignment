@@ -17,6 +17,7 @@
 
 @synthesize arrayOfListData;
 @synthesize imageView;
+@synthesize selected_image;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -27,7 +28,12 @@
 -(void) viewDidAppear:(BOOL)animated {
     [super viewDidAppear:true];
     
-    [self displayImage];
+    if(selected_image) {
+        self->imageView.image = selected_image;
+    }
+    else {
+        [self displayImage];
+    }
 }
 
 -(void) displayImage {

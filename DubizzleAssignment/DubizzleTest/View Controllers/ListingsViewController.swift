@@ -115,7 +115,14 @@ extension ListingsViewController: UITableViewDelegate, UITableViewDataSource {
         let formattedDateString = Helper.getFormattedDate(selected_item.created_at)
         detailVC.arrayOfListData.insert(formattedDateString ?? "", at: 2)
         
-        detailVC.imgString = selected_item.image_urls[0]
+        if let imageUrl = URL(string: selected_item.image_urls[0]) {
+            if let cachedImage = image_cache.returnCacheImage(imageUrl: imageUrl) {
+                detailVC.selected_image = cachedImage
+            }
+            else {
+                detailVC.imgString = selected_item.image_urls[0]
+            }
+        }
         
         self.navigationController?.pushViewController(detailVC, animated: true)
     }

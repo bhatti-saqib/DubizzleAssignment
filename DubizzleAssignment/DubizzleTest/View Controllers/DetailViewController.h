@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic) NSMutableArray* arrayOfListData;
 @property (strong, nonatomic) NSString* imgString;
 @property (nonatomic, strong) IBOutlet UIImageView* imageView;
+@property (nonatomic, strong) IBOutlet UIImage* selected_image;
 
 @end
 
